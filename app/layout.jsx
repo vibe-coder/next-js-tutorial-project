@@ -5,10 +5,25 @@ export const metadata = {
   description: "Discover & Share AI Prompts"
 }
 
-const layout = () => {
+const RootLayout = ({children}) => {
   return (
-    <div>layout</div>
+    <html lang="en">
+      <body>
+
+        {/* Created a Gradient background for Layout page */}
+
+        <div className="main">
+          <div className="gradient" />
+        </div>
+
+        {/* The Actual main part of our application */}
+        
+        <main className="app">
+          {children}
+        </main>
+      </body>
+    </html>
   )
 }
 
-export default layout
+export default RootLayout
