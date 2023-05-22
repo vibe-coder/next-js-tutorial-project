@@ -6,14 +6,11 @@ import { signIn } from "next-auth/react";
 
 
 
-
-
 const handler = NextAuth({
   providers:[
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-
+      clientSecret: process.env.GOOGLE_CLIENT_SERCRET 
     })
   ],
   
@@ -22,7 +19,11 @@ const handler = NextAuth({
   },
 
   async signIn({profile}){
-
+    try {
+      
+    } catch(error){
+      
+    }
   }
 })
 
